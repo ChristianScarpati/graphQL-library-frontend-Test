@@ -4,18 +4,11 @@ import { GET_ALL_AUTHORS } from "../queries";
 const Authors = (props) => {
   const getAuthors = useQuery(GET_ALL_AUTHORS);
 
-  const getAuthorsResult = getAuthors?.data?.AllAuthors
-
-  // const { data } = useQuery(GET_ALL_AUTHORS);
-  // const authorsResult = data?.AllAuthors;
-
-  console.log(getAuthorsResult)
+  const getAuthorsResult = getAuthors?.data?.AllAuthors || [];
 
   if (!props.show) {
     return null;
   }
-
-  const authors = [];
 
   return (
     <div>
