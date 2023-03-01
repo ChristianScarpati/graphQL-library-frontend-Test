@@ -3,7 +3,6 @@ import { GET_ALL_AUTHORS } from "../queries";
 
 const Authors = (props) => {
   const getAuthors = useQuery(GET_ALL_AUTHORS);
-
   const getAuthorsResult = getAuthors?.data?.AllAuthors || [];
 
   if (!props.show) {
